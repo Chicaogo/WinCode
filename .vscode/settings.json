@@ -8,7 +8,9 @@
         "unordered_set": "cpp",
         "vector": "cpp",
         "initializer_list": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "bitset": "cpp",
+        "chrono": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
