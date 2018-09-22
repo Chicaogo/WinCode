@@ -86,6 +86,6 @@ int main(){
     
     printf("%d",ans);
 
-    getchar();getchar();getchar();
+    getchar();getchar();getchar();getchar();getchar();
     return 0;
 }
