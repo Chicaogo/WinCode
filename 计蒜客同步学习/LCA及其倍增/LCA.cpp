@@ -1,4 +1,14 @@
 #include<bits/stdc++.h>
+/*样例
+5
+1 2
+2 3
+1 4
+2 5
+2
+3 4
+3 5
+*/
 using namespace std;
 const int MAX_N=100000;
 const int MAX_M=1000000;
