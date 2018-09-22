@@ -38,19 +38,13 @@ void dfs(int u){
 }
 int lca(int x,int y){
     int i,j;
-    if(d[x]<d[y]){
-        swap(x,y);
-    }
+    if(d[x]<d[y]) swap(x,y);
     for(i = 0;(1<<i)<=d[x];i++);
     --i;
     for(j = i;j>=0;j--){
-        if(d[x]-(1<<j)>=d[y]){
-            x=fa[x][j];
-        }
+        if(d[x]-(1<<j)>=d[y]) x=fa[x][j];
     }
-    if(x==y){
-        return x;
-    }
+    if(x==y) return x;
     for(j=i;j>=0;j--){
         if(fa[x][j]!=fa[y][j]){
             x = fa[x][j];
