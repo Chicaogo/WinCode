@@ -64,7 +64,15 @@ int main() {
         insert(v,u);
     }
     memset(d,-1,sizeof(d));
+    d[1]=1;
     dfs(1);
+    
+    for(int i = 0; i < n; i++)
+    {
+        cout<<d[i]<<ends;
+    }
+    
+    
     for(int level=1;(1<<level)<=n;level++){
         for(int i = 1;i<=n;i++){
             fa[i][level]=fa[fa[i][level-1]][level-1];
