@@ -46,7 +46,7 @@ int main(int argc, char const *argv[])
         else if(d[z]>b[c]) c++;
         else if(d[z]<b[c]) z++;
     }
-    cout << ans <<endl;
+    cout << ans ;
     getchar();getchar();getchar();
     return 0;
 }
