@@ -41,15 +41,6 @@ int fin(int a){
     if(fa[a] == a) return a;
     else return fin(fa[a]);
 }
-
-int get(int b){
-    if(fa[b] == b) return b;
-    else {
-        fa[b] = get(fa[b]);
-        return fa[b];
-    }
-}
-
 int main(int argc, char const *argv[])
 {
     int n; scanf("%d",&n);
@@ -73,7 +64,5 @@ int main(int argc, char const *argv[])
         printf("%d\n",ans-1);
         scanf("%d",&n);
     }
-    
-    
     return 0;
 }
