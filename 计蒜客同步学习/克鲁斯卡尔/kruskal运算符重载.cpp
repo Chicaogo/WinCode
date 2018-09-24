@@ -26,7 +26,7 @@ int main() {
     
 	cin>>n>>m;
     for(int i=0;i<m;i++){
-        cin>>e[i].u>>e[i].v>>e[i].w;
+        scanf("%d%d%d",&e[i].u,&e[i].v,&e[i].w);
     }
     sort(e,e+m);
     for(int i=1;i<=n;++i){
@@ -40,6 +40,6 @@ int main() {
             sum += e[i].w;
         }
     }
-    cout<<sum<<endl;
+    printf("%d",sum);
     return 0;
 }
