@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-int tata(int n,string from,string to,string help){
+inline void tata(int n,string from,string to,string help){
     if(n == 1) cout << "Move " << n << ends << from << " to " << to <<endl;
     else{
         tata(n-1,from,help,to);
