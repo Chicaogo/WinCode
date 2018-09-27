@@ -41,5 +41,6 @@ int main() {
         }
     }
     printf("%d",sum);
+    getchar();getchar();
     return 0;
 }
