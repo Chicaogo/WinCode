@@ -3,8 +3,9 @@
 #include<algorithm>
 using namespace std;
 struct Edge{
-int to;
-int cost;};
+    int to;
+    int cost;
+};
 vector <Edge> G[10000];//G[i]代表从i出发的边，vector里存的是边
 int m,n;
 int temp1;
