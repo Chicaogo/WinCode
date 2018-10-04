@@ -1,8 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
+int ans=0;
 inline void chuan(string ch,int i,string res){
     if(i == ch.length()) {
-        cout << res << endl;
+        ++ans;
+        cout << res << ends <<ans <<endl;
         return;
     }
     chuan(ch,i+1,res+ch[i]);
@@ -11,7 +13,7 @@ inline void chuan(string ch,int i,string res){
 
 int main(int argc, char const *argv[])
 {
-    chuan("abc",0,"");
+    chuan("123456",0,"");
     getchar();
     return 0;
 }
