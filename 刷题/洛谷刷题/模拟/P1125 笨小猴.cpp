@@ -6,7 +6,7 @@ using namespace std;
 int maxn,minn,tong,len;
 char word[110];
 int ans[110];
-
+//ÅĞ¶ÏËØÊı
 bool su(int n)
 {
     if(n==0 || n==1) return 0;
