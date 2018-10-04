@@ -20,20 +20,27 @@ int n;
 long long a;
 long long ans = 0;
 
-
+long long mimi(long long a, long long b, int n)
+{
+	long long ans=1;
+	a=a%n;
+	while(b>0)
+	{
+		if(b%2==1)
+			ans=(ans*a)%n;
+		b/=2;
+		a=(a*a)%n;
+	};
+    return ans;
+}
 
 int main(int argc, char const *argv[])
 {
     n=read();
     int p=n-1,b=2;
-    long long qwq=1;
-    while(p>0)
-    {
-        if(p%2!=0) qwq=qwq*b;
-        b=b*b;
-        p>>=1;
-    }
-    cout<<qwq<<endl;
+    long long qwq;
+    qwq=mimi(b,p,mo);
+
     for(int i=1;i<=n;++i)
     {
         a=read();
