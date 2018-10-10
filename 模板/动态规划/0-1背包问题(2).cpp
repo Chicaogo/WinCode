@@ -9,7 +9,7 @@ int w[MAXN],v[MAXN];
 int n,W;
 
 int res(int i,int j){
-    int ans;
+    int ans = 0;
     if(dp[i][j]>=0) 
     {
         //cout<< dp[i][j] << ends;
