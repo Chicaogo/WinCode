@@ -13,7 +13,7 @@ inline void add(int x,int y)
     fuck[++tot].u=head[x];
     fuck[tot].v=y;
     head[x] = tot;
-}
+}//链式前向星存图
 
 void dfs(int x,int dis)
 {
@@ -24,6 +24,7 @@ void dfs(int x,int dis)
         ans++;
         return;
     }
+    //链式前向星遍历
     for(int i=head[x];i;i=fuck[i].u)
     {
         int nxt=fuck[i].v;
