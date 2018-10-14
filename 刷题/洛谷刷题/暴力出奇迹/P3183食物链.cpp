@@ -11,14 +11,14 @@ il int read()
     return x*t;
 }
 
-const int  maxn = 100010;
-int head[maxn],ru[maxn],cu[maxn],vis[maxn];
+const int  maxn = 400010;
+int head[maxn*4],ru[maxn],cu[maxn],vis[maxn];
 int tot = 0, n, m;
 
 struct edge
 {
     int x,y,next;
-}G[maxn<<1];
+}G[maxn*2];
 
 il void addedge(int x,int y)
 {
