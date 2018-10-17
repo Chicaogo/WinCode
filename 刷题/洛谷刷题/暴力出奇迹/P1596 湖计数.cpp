@@ -4,8 +4,8 @@ using namespace std;
 int n,m,ans;
 char mapp[110][110];
 
-int fuckx[9]={0,-1,-1,-1,0,0,1,1,1};//x方向
-int fucky[9]={0,-1,0,1,-1,1,-1,0,1};//y方向
+int fuckx[9]={0,-1,-1,-1,0,0,1,1,1};
+int fucky[9]={0,-1,0,1,-1,1,-1,0,1};
 
 void dfs(int x,int y)
 {
@@ -14,7 +14,7 @@ void dfs(int x,int y)
     {
         int nx=x+fuckx[i];
         int ny=y+fucky[i];
-        if (nx<1||nx>n||ny<1||ny>m||mapp[nx][ny]=='.')//判断是否出界
+        if (nx<1||nx>n||ny<1||ny>m||mapp[nx][ny]=='.')
             continue;
         mapp[nx][ny]='.';
         dfs(nx,ny);
