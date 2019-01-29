@@ -18,7 +18,7 @@ void find()
     cnt = a1*b2 - a2*b1;
     cntx = c1*b2 - b1*c2;
     cnty = a1*c2 - a2*c1;
-    if(cnt == 0) cout << "No answer£¡"
+    if(cnt == 0) cout << "No answer£¡";
     else printf("%.2lf %.2lf",cntx/cnt,cnty/cnt);
 }
 
