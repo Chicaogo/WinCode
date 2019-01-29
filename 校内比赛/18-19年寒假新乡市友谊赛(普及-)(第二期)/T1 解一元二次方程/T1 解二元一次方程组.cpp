@@ -25,6 +25,8 @@ void find()
 int main(int argc, char const *argv[])
 {
     ios::sync_with_stdio(false);
+    freopen("3.in","r",stdin);
+	freopen("3.out","w",stdout); 
 
     init();
 
