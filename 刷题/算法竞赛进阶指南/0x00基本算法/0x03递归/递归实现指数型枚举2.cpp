@@ -13,18 +13,23 @@ void dfs(int u, int state) {
                 //因为题目是从1开始的，所以要加1
                 cout << i + 1 << " ";
         }
+
         cout << endl;
         return ;
     }
 
     //不用这个数，不进行操作
     dfs (u + 1, state);
+
     //用这个数，把第u位变成1
     dfs (u + 1, state | (1 << u));
 }
 
 int main(void) {
+    
     cin >> n;
+    
     dfs(0, 0);
+    
     return 0;
 }
