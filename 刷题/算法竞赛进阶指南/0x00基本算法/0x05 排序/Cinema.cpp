@@ -53,5 +53,6 @@ int main(void)
 
     find();
 
+    system("pause");
     return 0;
 }
