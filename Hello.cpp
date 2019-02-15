@@ -19,6 +19,6 @@ int main(int argc, char const *argv[])
 
     find();
 
-    getchar();getchar();getchar();
+    system("pause");
     return 0;
 }
