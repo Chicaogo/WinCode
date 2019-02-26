@@ -2,7 +2,7 @@
 using namespace std;
 
 int n,k,ans;
-int num[110],c[110],tong[110];
+int num[110],c[110];
 
 int main(void)
 {
@@ -15,15 +15,18 @@ int main(void)
 
         if(!num[number])
         {
-            c[ans++] = i;
+            c[++ans] = i;
             num[number] = 1;
         }
     }
 
-    cout << ans;
-
-    for(int i = 1;i <= ans;++i)
-        cout << c[i];
+	if(ans >= k)
+	{
+		cout << "YES" << endl;
+		for(int i = 1;i <= k;++i)
+        	cout << c[i]  << " ";
+	}
+    else cout << "NO";
 
     return 0;
 }
