@@ -30,7 +30,9 @@ int main(void)
     while(n--)
     {
         string s;
-        cout << find(s);
+        cin >> s;
+ 
+        cout << find(s) << endl;
     }
 
     return 0;
