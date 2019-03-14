@@ -13,6 +13,7 @@ int main()
     s.push(50);
     s.push(4);
  
+    cout << s.size() << endl;
     // ÔªËØÒÀ´Î³öÕ»
     while(!s.empty())
     {
