@@ -1,110 +1,46 @@
-#include <stdio.h>
-#include <stdlib.h>
-struct node
-{
-    int key;
-    struct node *next;
+struct Node{
+	int value;
+	Node *prev,*next;
 };
 
-typedef struct node Node;
+Node *head,*tail;
 
-Node *head = NULL;
+inline void initialize();				//新键链表
+inline void insert(Node *p,int val);	//在 P 后面增加数据val值
+inline void remove(Node *p);			//删除 P 
+inline void recycle();					//链表内存回收 
 
-void insert(int num)
+inline void initialize()
 {
-    Node * new_node, *current;
-    new_node = (Node*)malloc(sizeof(Node));
-
-    new_node->key = num;
-
-    if(head == NULL || head->key > num)
-    {
-        new_node->next = head;
-        head = new_node;
-    }
-    else
-    {
-        current = head;
-        while(1)
-        {
-            if(current->next ==NULL || current->next->key > num )
-            {
-                new_node->next = current->next;
-                current->next = new_node;
-                break;
-            }
-            else
-            {
-                current = current->next;
-            }
-        }
-    }
+	head = new Node();
+	tail = new Node();
+	head->next = tail;
+	tail->prev = head;
 }
 
-void print()
+inline void insert(Node *p,int val)
 {
-   Node * current;
-   if(head == NULL)
-   {
-       printf("閾捐〃涓虹┖锛乗n");
-   }
-   current = head;
-   while(current != NULL)
-   {
-       printf("%d\n",current->key);
-       current = current->next;
-   }
+	Node *q = new Node();
+	q->value = val;
+	p->next->prev = q;
+	q->next = p->next;
+	p->next = q;
+	q->prev = p;
 }
 
-Node * delete(int num)
+inline void remove(Node *p)
 {
-    Node * current = head;
-    Node * answer;
-    if(head != NULL && head->key == num)
-    {
-        head = head->next;
-        return current;
-    }
-    else if(head != NULL && head->key > num)
-    {
-       return NULL;
-    }
-
-    while(current != NULL)
-    {
-        Node * answer;
-        if(current->next != NULL && current->next->key == num)
-        {
-            answer = current->next;
-            current->next = current->next->next;
-            return answer;
-        }else if(current->next != NULL && current->next->key > num)
-        {
-            return NULL;
-        }
-
-        current = current->next;
-    }
-
-    return NULL;
+	p->prev->next = p->next;
+	p->next->prev = p->prev;
+	delete p;
 }
 
-int main()
+inline void recycle()
 {
-    Node * x;
-    insert(14);
-    insert(2);
-    insert(545);
-    insert(44);
-    print();
-
-    x = delete(44);
-    if(x != NULL)
-    {
-        free(x);
-    }
-    print();
-
-
-    return 0;
+	while (head != tail)
+	{
+		head = head->next;
+		delete head->prev;
+	}
+	delete tail;
 }
