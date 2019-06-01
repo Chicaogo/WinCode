@@ -3,7 +3,7 @@ using namespace std;
 
 void init()
 {
-
+    cout << "hello world!" << endl;
 }
 
 void find()
